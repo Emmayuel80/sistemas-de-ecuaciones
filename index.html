@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Programa Ecuaciones Diferenciales</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+</head>
+<style>
+    #page-content {
+        margin-left: 1.5%;
+    }
+    #resultado {
+        margin-top: 1.5%;
+        margin-left: 1.5%;
+
+    }
+    #dataTable{
+        display: none;
+    }
+    td {
+        border: 1px solid black;
+    }
+    #input1, #input2, #input3{
+        width: 100px;
+    }
+    #ggb-element{
+        width: 300px;
+        height: 300px;
+    }
+</style>
+
+<body>
+<script src="GeoGebra/deployggb.js"></script>
+    <link rel="stylesheet" href="CSS/material.min.css">
+    <script src="JS/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="CSS/material.min.css">
+    <script src="JS/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="JS/ecuacion_general.js"></script>
+    <script type="text/javascript" src="JS/main.js"></script>
+    <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+           mdl-layout--fixed-tabs ">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout__title" id="page-title">Sistemas de Ecuaciones 2x2</span>
+            </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#fixed-tab-1" class="mdl-layout__tab is-active" id="tab1">Input</a>
+                <a href="#fixed-tab-2" class="mdl-layout__tab" id="tab2">Resultado</a>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Trabajo Hecho por:<br />
+            -Silvestre Emmanuel Ramirez Moreno <br />
+
+            </span>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                <div id="page-content" class="page-content">
+
+
+
+                    <form id="data">
+                        <div class="mdl-textfield mdl-js-textfield" id="input1">
+                            <input class="mdl-textfield__input" type="tel" pattern="-?[0-9]*(\.[0-9]+)?" id="a" >
+                            <label class="mdl-textfield__label" for="a">Number...</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div><b>x </b>
+                        <div class="mdl-textfield mdl-js-textfield" id="input2">
+                            <input class="mdl-textfield__input" type="tel" pattern="-?[0-9]*(\.[0-9]+)?" id="b" >
+                            <label class="mdl-textfield__label" for="b">Number...</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div><b>y=  </b>
+                        <div class="mdl-textfield mdl-js-textfield" id="input3">
+                            <input class="mdl-textfield__input" type="tel" pattern="-?[0-9]*(\.[0-9]+)?" id="c" >
+                            <label class="mdl-textfield__label" for="c">Number...</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div> <br>
+                        <form id="data2">
+                            <div class="mdl-textfield mdl-js-textfield" id="input1">
+                                <input class="mdl-textfield__input" type="tel" pattern="-?[0-9]*(\.[0-9]+)?" id="d" >
+                                <label class="mdl-textfield__label" for="d">Number...</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div><b>x </b>
+                            <div class="mdl-textfield mdl-js-textfield" id="input2">
+                                <input class="mdl-textfield__input" type="tel" pattern="-?[0-9]*(\.[0-9]+)?" id="e" >
+                                <label class="mdl-textfield__label" for="e">Number...</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div><b>y=  </b>
+                            <div class="mdl-textfield mdl-js-textfield" id="input3">
+                                <input class="mdl-textfield__input" type="tel" pattern="-?[0-9]*(\.[0-9]+)?" id="f" >
+                                <label class="mdl-textfield__label" for="f">Number...</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+
+                        </form>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit" onclick="getData()">Calcular</button>
+
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                <div class="page-content">
+                    <h3>
+                        <div id="resultado">
+
+                            <div id="matrix"></div>
+                            <br>
+                            <div id="tipo_sol"></div>
+                            <br>
+                            <div id="sol"></div>
+                            <br>
+                            <div id="ggb-element"></div>
+                            <table id="dataTable">
+                                <tr>
+                                    <td>X</td>
+                                    <td>Y</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </h3>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
